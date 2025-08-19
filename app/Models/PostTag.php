@@ -9,6 +9,7 @@ class PostTag extends Model
     protected $fillable = [
         'name',
         'slug',
+        'color',
         'description',
     ];
 

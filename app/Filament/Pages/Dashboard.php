@@ -23,7 +23,7 @@ class Dashboard extends BaseDashboard
             ->login()
             ->home(static::class)
             ->brandName('Surya Pangan')
-            ->brandLogo(asset('assets/images/logo.jpg'))
+            ->brandLogo(asset('assets/images/Logo-Surya-Pangan-Trans.png'))
             ->colors([
                 'primary' => '#F59E0B', // Amber color
             ]);

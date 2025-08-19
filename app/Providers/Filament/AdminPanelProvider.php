@@ -33,7 +33,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Surya Pangan')
-            ->brandLogo(asset('assets/images/logo.jpg'))
+            ->brandLogo(asset('assets/images/Logo-Surya-Pangan-Trans.png'))
+            // Size Logo
+            ->brandLogoHeight('4rem')
             ->colors([
                 'primary' => Color::Amber,
             ])

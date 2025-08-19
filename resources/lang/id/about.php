@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'Tentang Surya Pangan',
+    'description' => 'Perjalanan kami dalam menghadirkan cita rasa autentik Indonesia melalui rempah dan bumbu berkualitas premium.',
+    'story' => 'Cerita Kami',
+    'story_1' => 'Surya Pangan didirikan pada tahun 2010 dengan visi sederhana namun mulia: menghadirkan rempah dan bumbu berkualitas premium yang mempertahankan cita rasa autentik Indonesia. Berawal dari sebuah usaha keluarga kecil di Yogyakarta, kami memahami betapa pentingnya kualitas rempah dalam menciptakan masakan yang lezat dan berkesan.',
+    'story_2' => 'Dengan pengalaman lebih dari satu dekade, kami telah berkembang menjadi salah satu penyedia rempah dan bumbu terpercaya di Indonesia. Setiap produk yang kami hasilkan melalui proses seleksi ketat, mulai dari pemilihan bahan baku hingga proses pengolahan yang higienis dan modern.',
+    'story_3' => 'Komitmen kami tidak hanya pada kualitas produk, tetapi juga pada kepuasan pelanggan. Dengan dukungan lebih dari 18.000 pelanggan setia dan rating 5.0 di Google, kami terus berinovasi untuk memberikan yang terbaik bagi keluarga Indonesia.',
+    'vision' => 'Visi & Misi Kami',
+    'visionmission_desc' => 'Komitmen kami dalam menghadirkan produk berkualitas dan membangun kepercayaan pelanggan',
+    'mission' => 'Misi Kami',
+    'mission_1' => 'Lorem Ipsum',
+    'mission_2' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nam perferendis adipisci?',
+    'mission_3' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nam perferendis adipisci?',
+    'vision' => 'Visi Kami',
+    'vision_desc' => 'Bahan kue terlengkap denpasar, juga tersedia cetakan, loyang, perlengkapan ultah dll, juga melayani pembelian secara online yang aman & terpercaya, jadi jangan ragu untuk berbelanja pada kami, kami akan memberikan layanan yang terbaik untuk anda.',
+    'values' => 'Nilai-Nilai Kami',
+    'values_desc' => 'Kami menjunjung tinggi kualitas, keaslian, dan keberlanjutan dalam setiap aspek bisnis kami.',
+    'value_1' => 'Kualitas',
+    'value_2' => 'Keaslian',
+    'value_3' => 'Keberlanjutan',
+    'value_1_desc' => 'Kami berkomitmen untuk menyediakan produk yang berkualitas tinggi.',
+    'value_2_desc' => 'Kami menjaga keaslian setiap produk yang kami tawarkan.',
+    'value_3_desc' => 'Kami berupaya untuk menerapkan praktik bisnis yang berkelanjutan dan ramah lingkungan.',
+    'team' => 'Tim Kami',
+    'team_desc' => 'Kami memiliki tim yang berdedikasi dan berpengalaman dalam industri ini.',
+];

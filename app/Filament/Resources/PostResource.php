@@ -68,7 +68,11 @@ class PostResource extends Resource
                     ->searchable()
                     ->required(),
                 FileUpload::make('thumbnail')
-                    ->image(),
+                    ->image()
+                    ->required()
+                    ->maxSize(2048) // 2MB
+                    ->disk('public')
+                    ->directory('post-thumbnails'),
                 RichEditor::make('body')
                     ->label('Body')
                     ->required(),
@@ -103,7 +107,9 @@ class PostResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('thumbnail')
                     ->label('Thumbnail')
-                    ->circular(),
+                    ->disk('public')
+                    ->url(fn($record) => asset('storage/' . $record->thumbnail))
+                    ->square(),
                 Tables\Columns\BooleanColumn::make('is_published')
                     ->label('Published'),
                 Tables\Columns\TextColumn::make('published_at')

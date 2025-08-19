@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
+use Doctrine\DBAL\Query\From;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -58,7 +59,14 @@ class ProductResource extends Resource
                     ->relationship('tags', 'name')
                     ->multiple()
                     ->preload()
-                    ->searchable()
+                    ->searchable(),
+                Forms\Components\FileUpload::make('thumbnail')
+                    ->label('Thumbnail')
+                    ->image()
+                    ->required()
+                    ->maxSize(2048) // 2MB
+                    ->disk('public')
+                    ->directory('product-thumbnails'),
             ]);
     }
 
@@ -73,6 +81,9 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('slug')
                     ->label('Slug')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('thumbnail')
+                    ->label('Thumbnail')
+                    ->circular(),
                 Tables\Columns\TextColumn::make('category.name')
                     ->label('Category')
                     ->searchable(),

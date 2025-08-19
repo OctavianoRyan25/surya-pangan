@@ -10,7 +10,7 @@ class LandingController extends Controller
     {
         $posts = \App\Models\Post::latest()->take(3)->get();
         $products = \App\Models\Product::with('category')->latest()->take(4)->get();
-        $categories = \App\Models\ProductCategory::all();
+        $categories = \App\Models\ProductCategory::withCount('products')->get();
 
         return view('landing.home', compact('posts', 'products', 'categories'));
     }

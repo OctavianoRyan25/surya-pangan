@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'About Surya Pangan',
+    'description' => 'Our journey in bringing authentic Indonesian flavors through premium spices and seasonings.',
+    'story' => 'Our Story',
+    'story_1' => 'Surya Pangan was founded in 2010 with a simple yet noble vision: to bring premium spices and seasonings that preserve the authentic flavors of Indonesia. Starting as a small family business in Yogyakarta, we understood the importance of quality spices in creating delicious and memorable dishes.',
+    'story_2' => 'With over a decade of experience, we have grown into one of the trusted providers of spices and seasonings in Indonesia. Every product we produce goes through a strict selection process, from sourcing raw materials to hygienic and modern processing.',
+    'story_3' => 'Our commitment is not only to product quality but also to customer satisfaction. With the support of over 18,000 loyal customers and a 5.0 rating on Google, we continue to innovate to provide the best for Indonesian families.',
+    'vision' => 'Our Vision & Mission',
+    'visionmission_desc' => 'Our commitment to delivering quality products and building customer trust',
+    'mission' => 'Our Mission',
+    'mission_1' => 'Lorem Ipsum',
+    'mission_2' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nam perferendis adipisci?',
+    'mission_3' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae nam perferendis adipisci?',
+    'vision' => 'Our Vision',
+    'vision_desc' => 'The most complete cake ingredients in Denpasar, also available molds, baking pans, birthday supplies, etc., also serving safe & reliable online purchases, so don’t hesitate to shop with us, we will provide the best service for you.',
+    'values' => 'Our Values',
+    'values_desc' => 'We uphold quality, authenticity, and sustainability in every aspect of our business.',
+    'value_1' => 'Quality',
+    'value_2' => 'Authenticity',
+    'value_3' => 'Sustainability',
+    'value_1_desc' => 'We are committed to providing high-quality products.',
+    'value_2_desc' => 'We maintain the authenticity of every product we offer.',
+    'value_3_desc' => 'We strive to implement sustainable and environmentally friendly business practices.',
+    'team' => 'Our Team',
+    'team_desc' => 'We have a dedicated and experienced team in this industry.',
+];
