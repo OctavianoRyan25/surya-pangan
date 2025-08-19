@@ -291,12 +291,12 @@
 
     <!-- View All Products Button -->
     <div class="text-center mt-8">
-        <button
+        <a href="{{ route('products') }}"
             class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
             Lihat Semua Produk Populer
             <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
-        </button>
+        </a>
     </div>
 </div>

@@ -32,14 +32,15 @@ Route::get('/blogs/{slug}', function ($slug) {
 })->name('blog.detail');
 
 Route::get('/about', function () {
-    return view('landing.about');
+    $categories = \App\Models\ProductCategory::withCount('products')->get();
+    return view('landing.about', compact('categories'));
 })->name('about');
 
 Route::get('/products', function () {
     $products = Product::with('category', 'tags')->latest()->get();
-    // dd($products);
+    $categories = \App\Models\ProductCategory::withCount('products')->get();
     // return response()->json($products);
-    return view('landing.product', compact('products'));
+    return view('landing.product', compact('products', 'categories'));
 })->name('products');
 
 Route::get('/api/products', function () {
@@ -51,6 +52,11 @@ Route::get('/api/product-categories', function () {
     $categories = \App\Models\ProductCategory::withCount('products')->get();
     return response()->json($categories);
 });
+
+Route::get('/contact', function () {
+    $categories = \App\Models\ProductCategory::withCount('products')->get();
+    return view('landing.contact', compact('categories'));
+})->name('contact');
 
 // Route::group(['prefix' => '{locale}', 'middleware' => 'locale'], function () {
 //     Route::get('/', function ($locale) {

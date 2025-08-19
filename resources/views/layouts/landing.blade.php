@@ -134,24 +134,22 @@
                             x-transition:leave-start="opacity-100 transform scale-100"
                             x-transition:leave-end="opacity-0 transform scale-95"
                             class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
-                            <a href="{{ route('products') }}"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">Semua
-                                Produk</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">Laptop
-                                Baru</a>
+                            @foreach ($categories as $category)
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">{{ $category->name }}</a>
+                            @endforeach
                             <a href="#"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">Aksesoris</a>
                             <div class="border-t border-gray-100 my-1"></div>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">Service
-                                & Repair</a>
+                            <a href="{{ route('products') }}"
+                                class="block px-4 py-2 text-sm bg-orange-100 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">Semua
+                                Produk</a>
                         </div>
                     </div>
 
                     <a href="{{ route('about') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Tentang</a>
-                    <a href="#"
+                    <a href="{{ route('contact') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Kontak</a>
                     <a href="{{ route('blogs') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Blog</a>
@@ -256,9 +254,9 @@
                         </div>
                     </div>
 
-                    <a href="#"
+                    <a href="{{ route('about') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Tentang</a>
-                    <a href="#"
+                    <a href="{{ route('contact') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Kontak</a>
                     <a href="{{ route('blogs') }}"
                         class="text-gray-700 hover:text-orange-500 font-medium transition-colors duration-200">Blog</a>
