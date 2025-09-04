@@ -21,16 +21,6 @@
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0">
                 </iframe>
-
-                <!-- Map overlay with location markers -->
-                <div class="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-xs">
-                    <h4 class="font-bold text-gray-900 mb-2">Toko Utama</h4>
-                    <p class="text-sm text-gray-600 mb-2">Jl. Raya Surya Pangan No. 123</p>
-                    <div class="flex items-center text-sm text-green-600">
-                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        Buka sekarang
-                    </div>
-                </div>
             </div>
 
             <!-- Location Details -->
