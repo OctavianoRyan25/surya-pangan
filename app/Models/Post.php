@@ -17,6 +17,15 @@ class Post extends Model
         'published_at',
     ];
 
+    // Add description feom body
+
+    protected $appends = ['description'];
+
+    public function getDescriptionAttribute()
+    {
+        return substr(strip_tags($this->body), 0, 150) . '...';
+    }
+
     public function category()
     {
         return $this->belongsTo(PostCategory::class, 'category_id');

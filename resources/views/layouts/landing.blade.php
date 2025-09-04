@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>{{ __('Beranda') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/Logo-Surya-Pangan-Trans.png') }}">
     {{-- Init Font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,7 +136,7 @@
                             x-transition:leave-end="opacity-0 transform scale-95"
                             class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50">
                             @foreach ($categories as $category)
-                                <a href="#"
+                                <a href="{{ route('products.category', $category->slug) }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">{{ $category->name }}</a>
                             @endforeach
                             <a href="#"
@@ -240,17 +241,10 @@
                         <div x-show="mobileDropdownOpen" x-transition:enter="transition ease-out duration-200"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                             class="mt-2 ml-4 space-y-2">
-                            <a href="#"
-                                class="block text-sm text-gray-600 hover:text-orange-500 transition-colors duration-200">Laptop
-                                Bekas</a>
-                            <a href="#"
-                                class="block text-sm text-gray-600 hover:text-orange-500 transition-colors duration-200">Laptop
-                                Baru</a>
-                            <a href="#"
-                                class="block text-sm text-gray-600 hover:text-orange-500 transition-colors duration-200">Aksesoris</a>
-                            <a href="#"
-                                class="block text-sm text-gray-600 hover:text-orange-500 transition-colors duration-200">Service
-                                & Repair</a>
+                            @foreach ($categories as $category)
+                                <a href="{{ route('products.category', $category->slug) }}"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors duration-200">{{ $category->name }}</a>
+                            @endforeach
                         </div>
                     </div>
 

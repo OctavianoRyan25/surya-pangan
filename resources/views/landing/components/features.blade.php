@@ -13,7 +13,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 mx-2" x-data="{}">
 
         @foreach ($categories as $category)
-            <div class="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+            <a href="{{ route('products.category', $category->slug) }}"
+                class="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
                 x-data="{ isHovered: false }" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
                 <div class="relative h-48 bg-gradient-to-br from-orange-400 to-orange-600 overflow-hidden">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300">
@@ -52,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
         @endforeach
     </div>
 
@@ -65,10 +66,10 @@
             Jelajahi seluruh koleksi produk kami dan temukan rempah berkualitas premium untuk dapur Anda
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
+            <a href="{{ route('products') }}"
                 class="bg-white text-orange-600 font-semibold px-8 py-3 rounded-full hover:bg-orange-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Lihat Semua Produk
-            </button>
+            </a>
             <button
                 class="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-orange-600 transition-all duration-200">
                 Hubungi Kami

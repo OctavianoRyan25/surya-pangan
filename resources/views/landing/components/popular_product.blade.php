@@ -57,17 +57,6 @@
                             </div>
                             <span class="text-xs text-gray-500 ml-1">(4.9)</span>
                         </div>
-                        <span class="text-sm font-medium text-green-600">Stok: 50+</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <span class="text-lg font-bold text-gray-900">Rp 45.000</span>
-                            <span class="text-sm text-gray-500 line-through ml-1">Rp 55.000</span>
-                        </div>
-                        <a href="https://wa.me/1234567890"
-                            class="bg-red-500 hover:bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-full transform group-hover:scale-105 transition-all duration-200">
-                            Beli
-                        </a>
                     </div>
                 </div>
             </div>

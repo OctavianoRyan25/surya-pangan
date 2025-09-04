@@ -71,24 +71,11 @@
             <div>
                 <h4 class="text-lg font-bold mb-6">Produk Populer</h4>
                 <ul class="space-y-3">
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Bumbu Rendang</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Kunyit
-                            Organik</a></li>
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Cabai Super
-                            Pedas</a></li>
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Bumbu
-                            Gado-gado</a></li>
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Rempah Dasar</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-gray-300 hover:text-orange-500 transition-colors duration-200">Bumbu Racikan</a>
-                    </li>
+                    @foreach ($popular_categories as $category)
+                        <li><a href="{{ route('products.category', $category->slug) }}"
+                                class="text-gray-300 hover:text-orange-500 transition-colors duration-200">{{ $category->name }}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 
@@ -102,8 +89,8 @@
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                         </svg>
                         <div>
-                            <p class="text-gray-300">Jl. Raya Surya Pangan No. 123</p>
-                            <p class="text-gray-300">Jakarta Selatan, DKI Jakarta 12345</p>
+                            <p class="text-gray-300">Jl. Mahendradatta No.18A-B</p>
+                            <p class="text-gray-300">Padangsambian, Kec. Denpasar Bar., Kota Denpasar, Bali 80117</p>
                         </div>
                     </div>
                     <div class="flex items-center space-x-3">
@@ -124,27 +111,11 @@
             </div>
         </div>
 
-        <!-- Newsletter Subscription -->
-        <div class="border-t border-gray-800 mt-12 pt-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h4 class="text-xl font-bold mb-4">Berlangganan Newsletter</h4>
-                <p class="text-gray-300 mb-6">Dapatkan informasi terbaru tentang produk dan penawaran khusus</p>
-                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Masukkan email Anda"
-                        class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                    <button
-                        class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
-                        Berlangganan
-                    </button>
-                </div>
-            </div>
-        </div>
-
         <!-- Bottom Footer -->
         <div class="border-t border-gray-800 mt-12 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                    © 2024 Surya Pangan. Semua hak dilindungi undang-undang.
+                    © {{ date('Y') }} Surya Pangan. Semua hak dilindungi undang-undang.
                 </p>
                 <div class="flex space-x-6 text-sm">
                     <a href="#"

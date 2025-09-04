@@ -4,8 +4,7 @@
     <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">Hubungi Kami</h1>
         <p class="text-xl text-orange-100 max-w-2xl mx-auto">
-            Siap melayani Anda dengan produk rempah berkualitas tinggi. Hubungi kami melalui berbagai channel yang
-            tersedia.
+            Hubungi kami melalui berbagai channel yang tersedia.
         </p>
     </div>
 </section>

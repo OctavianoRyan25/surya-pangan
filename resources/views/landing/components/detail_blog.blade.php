@@ -41,11 +41,6 @@
                             class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">#{{ $tag->name }}</span>
                     @endforeach
                 </div>
-
-                <p class="text-xl text-gray-600 leading-relaxed">
-                    Pelajari cara membuat bumbu rendang yang autentik dengan komposisi rempah yang tepat. Resep turun
-                    temurun dari Padang yang akan membuat rendang Anda istimewa dan penuh cita rasa.
-                </p>
             </header>
 
             <!-- Featured Image -->

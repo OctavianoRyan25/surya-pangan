@@ -1,16 +1,17 @@
 <div class="bg-gradient-to-r from-orange-500 to-red-600 py-16">
     <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
-            Semua Produk
+            {{ $category->name }}
         </h1>
         <p class="text-xl text-orange-100 max-w-2xl mx-auto">
-            Temukan semua produk terbaik kami di sini! Jelajahi berbagai kategori dan temukan apa yang Anda butuhkan.
+            Jelajahi produk-produk unggulan kami dalam kategori {{ $category->name }}. Temukan kualitas terbaik untuk
+            kebutuhan Anda.
         </p>
     </div>
 </div>
 
 <div class="container mx-auto px-4 py-8" x-data="{
-    selectedCategory: 'semua',
+    selectedCategory: '{{ $category->slug }}',
     searchQuery: '',
     sortBy: 'terpopuler',
     viewMode: 'grid',
@@ -22,7 +23,7 @@
     // Fungsi untuk memuat data dari Laravel
     fetchData() {
         // Ganti URL '/api/products' dengan endpoint API Anda di Laravel
-        fetch('/api/products')
+        fetch('/api/products/category/{{ $category->slug }}')
             .then(res => res.json())
             .then(data => {
                 console.log(data); // <- untuk cek isi
@@ -127,12 +128,6 @@
             <!-- Baris bawah: kategori scroll -->
             <div class="w-full overflow-x-auto">
                 <div class="flex flex-nowrap gap-2 px-1">
-                    <button @click="selectedCategory = 'semua'"
-                        :class="selectedCategory === 'semua' ? 'bg-orange-500 text-white' :
-                            'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-                        class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex-shrink-0">
-                        Semua
-                    </button>
                     <!-- Skeleton Loading -->
                     <template x-if="loadingCategory">
                         <div class="flex space-x-2">
@@ -141,13 +136,19 @@
                             </template>
                         </div>
                     </template>
-                    <template x-if="!loadingCategory" x-for="category in categories" :key="category.id">
-                        <button @click="selectedCategory = category.slug"
-                            :class="selectedCategory === category.slug ? 'bg-orange-500 text-white' :
-                                'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-                            class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex-shrink-0"
-                            x-text="category.name">
-                        </button>
+                    <template x-if="!loadingCategory">
+                        <template x-for="category in categories" :key="category.id">
+                            <button @click="selectedCategory = category.slug"
+                                :class="selectedCategory === category.slug ?
+                                    'bg-orange-500 text-white' :
+                                    (category.name !== '{{ $category->name }}' ?
+                                        'bg-gray-100 text-gray-400 cursor-not-allowed' :
+                                        'bg-gray-100 text-gray-700 hover:bg-gray-200')"
+                                class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 flex-shrink-0"
+                                x-text="category.name"
+                                :disabled="category.name !== '{{ $category->name }}' && selectedCategory !== category.slug">
+                            </button>
+                        </template>
                     </template>
                 </div>
             </div>
